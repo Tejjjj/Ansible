@@ -1,0 +1,12 @@
+- hosts: all
+  become: true
+  gather_facts: yes
+  tasks:
+    - name: Create a directory if it does not exist
+      file:
+        path: /home/ubuntu/file
+        state: touch
+        mode: "0777"
+    
+
+
